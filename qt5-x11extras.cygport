@@ -14,7 +14,7 @@ HOMEPAGE="http://qt-project.org/"
 SRC_URI="http://download.qt-project.org/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/qtx11extras-opensource-src-${VERSION}.tar.xz"
 SRC_DIR="qtx11extras-opensource-src-${VERSION}"
 
-PKG_NAMES="libQt5X11Extras5 libQt5X11Extras-devel"
+PKG_NAMES="libQt5X11Extras5 libQt5X11Extras-devel ${NAME}-doc"
 libQt5X11Extras5_CONTENTS="usr/bin/cygQt5X11Extras-5.dll"
 libQt5X11Extras_devel_CONTENTS="
 	usr/include/qt5/QtX11Extras/
@@ -23,10 +23,17 @@ libQt5X11Extras_devel_CONTENTS="
 	usr/lib/pkgconfig/Qt5X11Extras.pc
 	usr/lib/qt5/mkspecs/modules/qt_lib_x11extras.pri
 "
+qt5_x11extras_doc_CATEGORY="Doc"
+qt5_x11extras_doc_CONTENTS="usr/share/qt5/doc/qtx11extras*"
+
+src_compile() {
+	cd ${B}
+	cygqmake5 ${S}
+	cygmake
+	cygmake docs
+}
 
 src_install() {
 	cd ${B}
-	qt5_qmake_install
-
-	rm ${D}/usr/lib/*.la
+	qt5_qmake_install install_docs
 }
