@@ -15,7 +15,7 @@ SRC_URI="http://download.qt-project.org/official_releases/qt/${VERSION%.*}/${VER
 SRC_DIR="qtx11extras-opensource-src-${VERSION}"
 
 PKG_NAMES="libQt5X11Extras5 libQt5X11Extras-devel ${NAME}-doc"
-libQt5X11Extras5_CONTENTS="usr/bin/cygQt5X11Extras-5.dll"
+libQt5X11Extras5_CONTENTS="usr/bin/cygQt5X11Extras-5.dll usr/share/doc/"
 libQt5X11Extras_devel_CONTENTS="
 	usr/include/qt5/QtX11Extras/
 	usr/lib/cmake/Qt5X11Extras/
