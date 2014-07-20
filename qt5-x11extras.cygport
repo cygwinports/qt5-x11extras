@@ -1,7 +1,7 @@
 inherit qt5-qmake
 
 NAME="qt5-x11extras"
-VERSION=5.1.0
+VERSION=5.2.1
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Qt C++ application framework (X11Info API)"
@@ -22,6 +22,7 @@ libQt5X11Extras_devel_CONTENTS="
 	usr/lib/libQt5X11Extras.*
 	usr/lib/pkgconfig/Qt5X11Extras.pc
 	usr/lib/qt5/mkspecs/modules/qt_lib_x11extras.pri
+	usr/lib/qt5/mkspecs/modules/qt_lib_x11extras_private.pri
 "
 qt5_x11extras_doc_CATEGORY="Doc"
 qt5_x11extras_doc_CONTENTS="usr/share/qt5/doc/qtx11extras*"
