@@ -2,7 +2,7 @@ inherit qt5-qmake
 
 NAME="qt5-x11extras"
 VERSION=5.4.1
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="Qt C++ application framework (X11Info API)"
 DESCRIPTION="Qt is a cross-platform application framework for desktop and
